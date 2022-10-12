@@ -19,6 +19,8 @@ hwclock -w
 
 clear
 
+echo "Partitioning..."
+sleep 1
 parted /dev/sda mklabel gpt
 parted /dev/sda mkpart "EFI" fat32 1MiB 301MiB
 parted /dev/sda set 1 esp on
@@ -34,3 +36,21 @@ mkfs.fat -F 32 /dev/sda1
 mount /dev/sda3 /mnt 
 mount --mkdir /dev/sda1 /mnt/boot
 swapon /dev/sda2
+
+clear
+echo "Installing Packages..."
+sleep 1
+pacman -Sy archlinux-keyring --noconfirm
+clear
+pacstrap /mnt base linux linux-firmware nano dkms plasma sddm networkmanager git
+
+clear 
+echo "Finishing up..."
+sleep 1
+genfstab -U /mnt >> /mnt/etc/fstab
+cp setup2.sh /mnt/usr/bin/setup
+
+clear
+
+echo "When you are ready to proceed with setup, type 'setup'"
+arch-chroot /mnt 
