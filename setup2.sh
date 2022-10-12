@@ -71,6 +71,17 @@ read SUPERUSERACC
         fi
 
 clear
+echo "Finalizing Setup..." # add KDE Plasma welcome screen
+cd /tmp
+
+mkdir /home/$USERACCNAME/.config
+mkdir -p /home/$USERACCNAME/.config/autostart/
+
+echo "Cleaning Up..."
+cd /tmp
+rm -R elnathco
+rm /usr/bin/setup
+
 echo "Installation Finished."
 echo "To reboot, type 'exit' and then 'reboot'"
 exit
