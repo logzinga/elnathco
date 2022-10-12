@@ -20,7 +20,10 @@ cd elnathco
 rm /etc/locale.gen
 cp files/locale.gen /etc/
 cp files/locale.conf /etc/
+rm /etc/pacman.conf
+cp files/pacman.conf /etc/pacman.conf
 cd /
+rm -R elnathco
 clear
 
 echo "What would you like to call your computer? (no spaces or special characters)"
