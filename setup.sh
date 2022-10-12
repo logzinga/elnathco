@@ -42,7 +42,7 @@ echo "Installing Packages..."
 sleep 1
 pacman -Sy archlinux-keyring --noconfirm
 clear
-pacstrap /mnt base linux linux-firmware nano dkms plasma sddm networkmanager git grub efibootmgr intel-ucode amd-ucode sudo pulseaudio firefox dolphin flatpak packagekit-qt5 fwupd
+pacstrap /mnt base linux linux-firmware nano dkms plasma sddm networkmanager git grub efibootmgr intel-ucode amd-ucode sudo pulseaudio firefox dolphin flatpak packagekit-qt5 fwupd wine winetricks
 
 clear 
 echo "Finishing up..."
