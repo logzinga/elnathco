@@ -25,7 +25,6 @@ cp files/pacman.conf /etc/pacman.conf
 rm /etc/sudoers
 cp files/sudoers /etc/sudoers
 cd /
-rm -R elnathco
 clear
 
 echo "What would you like to call your computer? (no spaces or special characters)"
@@ -73,9 +72,12 @@ read SUPERUSERACC
 clear
 echo "Finalizing Setup..." # add KDE Plasma welcome screen
 cd /tmp
-
+cd elnathco
+cd files
 mkdir /home/$USERACCNAME/.config
 mkdir -p /home/$USERACCNAME/.config/autostart/
+cp org.kde.plasma-welcome.desktop /home/$USERACCNAME/.config/autostart/
+cp plasma-welcome /usr/share/applications
 
 echo "Cleaning Up..."
 cd /tmp
