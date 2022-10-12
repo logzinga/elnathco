@@ -77,7 +77,9 @@ cd files
 mkdir /home/$USERACCNAME/.config
 mkdir -p /home/$USERACCNAME/.config/autostart/
 cp org.kde.plasma-welcome.desktop /home/$USERACCNAME/.config/autostart/
-cp plasma-welcome /usr/share/applications
+cp plasma-welcome /usr/bin
+chmod +x /home/$USERACCNAME/.config/autostart/org.kde.plasma-welcome.desktop
+chmod +x /usr/bin/plasma-welcome
 
 echo "Cleaning Up..."
 cd /tmp
