@@ -39,7 +39,7 @@ mkinitcpio -P
 clear
 echo "Would you like a root account? (Administrator) [ y / n ]"
 read ROOTACC
-    if [ $ROOTACC = y]
+    if [ $ROOTACC = y ]
         then
             echo "Creating Root Account..."
             passwd
