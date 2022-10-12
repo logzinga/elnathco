@@ -81,6 +81,8 @@ cp plasma-welcome /usr/bin
 chmod +x /home/$USERACCNAME/.config/autostart/org.kde.plasma-welcome.desktop
 chmod +x /usr/bin/plasma-welcome
 
+pacman -Syu steam 
+
 echo "Cleaning Up..."
 cd /tmp
 rm -R elnathco
