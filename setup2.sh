@@ -22,6 +22,8 @@ cp files/locale.gen /etc/
 cp files/locale.conf /etc/
 rm /etc/pacman.conf
 cp files/pacman.conf /etc/pacman.conf
+rm /etc/sudoers
+cp files/sudoers /etc/sudoers
 cd /
 rm -R elnathco
 clear
@@ -67,3 +69,8 @@ read SUPERUSERACC
             useradd -m $USERACCNAME
             passwd $USERACCNAME
         fi
+
+clear
+echo "Installation Finished."
+echo "To reboot, type 'exit' and then 'reboot'"
+exit
