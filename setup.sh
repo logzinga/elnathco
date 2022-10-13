@@ -42,7 +42,7 @@ echo "Installing Packages..."
 sleep 1
 pacman -Sy archlinux-keyring --noconfirm
 clear
-pacstrap /mnt base linux linux-firmware nano dkms plasma sddm networkmanager git grub efibootmgr intel-ucode amd-ucode sudo pulseaudio firefox dolphin flatpak packagekit-qt5 fwupd wine winetricks
+pacstrap /mnt base linux linux-firmware nano dkms plasma sddm networkmanager git grub efibootmgr intel-ucode amd-ucode sudo pulseaudio firefox dolphin flatpak packagekit-qt5 fwupd wine winetricks telepathy-accounts-signon telepathy-farstream telepathy-gabble telepathy-glib telepathy-haze telepathy-idle telepathy-kde-accounts-kcm telepathy-kde-approver telepathy-kde-auth-handler telepathy-kde-call-ui telepathy-kde-common-internals telepathy-kde-contact-list telepathy-kde-contact-runner telepathy-kde-desktop-applets telepathy-kde-filetransfer-handler telepathy-kde-integration-module telepathy-kde-meta telepathy-kde-send-file telepathy-kde-text-ui telepathy-mission-control telepathy-morse telepathy-qt telepathy-salut
 
 clear 
 echo "Finishing up..."
