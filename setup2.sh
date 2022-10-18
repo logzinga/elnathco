@@ -1,17 +1,17 @@
 #!/bin/bash 
 
-systemctl enable NetworkManager
-systemctl enable sddm
+systemctl enable NetworkManager # Enables Internet
+systemctl enable sddm # Enables Login Screen
 
 clear
 
 echo "Setting Timezone to Australia/Sydney..."
 sleep 1
-ln -sf /usr/share/zoneinfo/Australia/Sydney /etc/localtime
+ln -sf /usr/share/zoneinfo/Australia/Sydney /etc/localtime # Sets the timezone
 
 clear
 
-hwclock --systohc
+hwclock --systohc # Syncs the clock again
 
 clear
 cd tmp
@@ -21,7 +21,7 @@ rm /etc/locale.gen
 cp files/locale.gen /etc/
 cp files/locale.conf /etc/
 rm /etc/pacman.conf
-cp files/pacman.conf /etc/pacman.conf
+cp files/pacman.conf /etc/pacman.conf # Copies some important files to the install
 rm /etc/sudoers
 cp files/sudoers /etc/sudoers
 cd /
@@ -29,14 +29,14 @@ clear
 
 echo "What would you like to call your computer? (no spaces or special characters)"
 read COMPUTERNAME
-echo $COMPUTERNAME >> /etc/hostname
+echo $COMPUTERNAME >> /etc/hostname # Sets computer name
 
 clear
-echo "Running mkinitcpio..."
+echo "Running mkinitcpio..." # Reruns mkinitcpio
 mkinitcpio -P
 
 clear
-echo "Would you like a root account? (Administrator) [ y / n ]"
+echo "Would you like a root account? (Administrator) [ y / n ]" # Asks if the user wants an Administrator Account
 read ROOTACC
     if [ $ROOTACC = y ]
         then
@@ -48,11 +48,11 @@ fi
 
 clear
 echo "Installing bootloader..."
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub # Creates the bootloader which allows Linux to boot
 grub-mkconfig -o /boot/grub/grub.cfg
 
 clear
-echo "What is your user account name? (no spaces or special characters)"
+echo "What is your user account name? (no spaces or special characters)" # Creates User
 read USERACCNAME
 echo "Would you like to be Administrator (superuser)? [ y / n ]"
 read SUPERUSERACC
@@ -70,7 +70,7 @@ read SUPERUSERACC
         fi
 
 clear
-echo "Finalizing Setup..." # add KDE Plasma welcome screen
+echo "Finalizing Setup..." # Sets up Plasma Welcome and installs steam
 cd /tmp
 cd elnathco
 cd files
@@ -83,11 +83,11 @@ chmod +x /usr/bin/plasma-welcome
 
 pacman -Syu steam --noconfirm
 
-echo "Cleaning Up..."
+echo "Cleaning Up..." # Deletes all useless items
 cd /tmp
 rm -R elnathco
 rm /usr/bin/setup
 
 echo "Installation Finished."
-echo "To reboot, type 'exit' and then 'reboot'"
+echo "To reboot, type 'exit' and then 'reboot'" # Completes Setup
 exit
