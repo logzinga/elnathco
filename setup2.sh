@@ -1,5 +1,9 @@
 #!/bin/bash 
 
+# TODO:
+# CHANGE DEFAULT WALLPAPER
+# ARCH ISO SEAMLESS INSTALLER
+
 systemctl enable NetworkManager # Enables Internet
 systemctl enable sddm # Enables Login Screen
 
