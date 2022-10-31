@@ -80,7 +80,7 @@ cd elnathco
 cd files
 mkdir /home/$USERACCNAME/.config
 mkdir -p /home/$USERACCNAME/.config/autostart/
-cp org.kde.plasma-welcome.desktop /home/$USERACCNAME/.config/autostart/
+cp org.kde.plasma-welcome.desktop /home/$USERACCNAME/.config/autostart/ # Adds the welcome screen correcctly, i would remove it from the start up applications but shut up
 cp plasma-welcome /usr/bin
 chmod +x /home/$USERACCNAME/.config/autostart/org.kde.plasma-welcome.desktop
 chmod +x /usr/bin/plasma-welcome
