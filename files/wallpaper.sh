@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript string:
+dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
 var Desktops = desktops();                                                                                                                       
 for (i=0;i<Desktops.length;i++) {
         d = Desktops[i];
@@ -8,5 +8,4 @@ for (i=0;i<Desktops.length;i++) {
         d.currentConfigGroup = Array("Wallpaper",
                                     "org.kde.image",
                                     "General");
-        d.writeConfig("Image", "file:///elnathco/files/wallpaper.png");
-        
+        d.writeConfig("Image", "file:///elnathco/files/wallpaper.png");'
