@@ -5,4 +5,6 @@ pause 2
 cd /
 git clone https://github.com/logzinga/elnathco
 cd elnathco
+chmod +777 setup.sh
+chmod +777 setup2.sh
 ./setup.sh 
