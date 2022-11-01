@@ -130,3 +130,5 @@ packagekit-qt5
 fwupd
 wine
 winetricks
+kde-applications
+firefox
