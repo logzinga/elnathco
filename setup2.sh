@@ -92,5 +92,5 @@ rm -R elnathco
 rm /usr/bin/setup
 
 echo "Installation Finished."
-echo "To reboot, type 'exit' and then 'reboot'" # Completes Setup
+echo "To reboot, type 'reboot'" # Completes Setup
 exit
