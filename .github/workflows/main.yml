@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+    - main
+    
+jobs:
+  BuildISO:
+    name: BuildISO
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Install Dependencies
+      run:  git clone https://gitlab.archlinux.org/archlinux/archiso.git \ cd archiso \ make install
+    - name: ISO Profile
+      run: git clone https://github.com/logzinga/elnathco.git \ cp elnathco/isoprofile ~/iso
+    - name: Build ISO
+      run: mkarchiso -v -w /tmp -o ~/out ~/iso/isoprofile
+
+      
+    
