@@ -93,11 +93,19 @@ makepkg -csi  # Spotify
 cd ..
 rm -R spotify
 
+cd /tmp
 git clone https://aur.archlinux.org/timeshift.git
 cd timeshift
 makepkg -csi # timeshift
 cd ..
 rm -R timeshift
+
+cd /tmp
+git clone https://aur.archlinux.org/ttf-ms-fonts.git
+cd ttf-ms-fonts
+makepkg -csi # microsoft fonts
+cd ..
+rm -R ttf-ms-fonts
 
 echo "Cleaning Up..." # Deletes all useless items
 cd /tmp
