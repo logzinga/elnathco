@@ -11,7 +11,7 @@ jobs:
     - name: Clone ARCHISO
       run:  git clone https://gitlab.archlinux.org/archlinux/archiso.git 
     - name: Install ARCHISO
-      run:  make install /archiso
+      run:  /archiso/Makefile make install
     - name: Clone ISOPROFILE
       run: git clone https://github.com/logzinga/elnathco.git 
     - name: Prepare ISO Profile  
