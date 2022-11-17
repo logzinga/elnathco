@@ -15,9 +15,9 @@ jobs:
          cd ~
          git clone https://github.com/logzinga/elnathco.git
       - name: create iso
-       run: |
-        cp -r elnathco/isoprofile ~/iso
-        sudo ~/archiso/archiso/mkarchiso -v -w /tmp -o ~/out ~/iso/isoprofile
+        run: |
+         cp -r elnathco/isoprofile ~/iso
+         sudo ~/archiso/archiso/mkarchiso -v -w /tmp -o ~/out ~/iso/isoprofile
 
         
 
