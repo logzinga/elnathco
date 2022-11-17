@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - name: Install Dependencies
-      run:  git clone https://gitlab.archlinux.org/archlinux/archiso.git 
-            cd archiso 
+      run:  git clone https://gitlab.archlinux.org/archlinux/archiso.git :
+            cd archiso :
             make install
     - name: ISO Profile
       run: git clone https://github.com/logzinga/elnathco.git \ cp elnathco/isoprofile ~/iso
