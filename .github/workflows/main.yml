@@ -8,7 +8,8 @@ jobs:
     name: BuildISO
     runs-on: ubuntu-18.04
     steps:
-      - run:  cd ~ | git clone https://gitlab.archlinux.org/archlinux/archiso.git 
+    
+      - run: git clone https://gitlab.archlinux.org/archlinux/archiso.git ~/archiso
 
       - run: git clone https://github.com/logzinga/elnathco.git 
   
