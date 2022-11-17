@@ -86,6 +86,13 @@ chmod +x /usr/bin/plasma-welcome
 
 pacman -Syu steam --noconfirm
 
+cd /tmp
+git clone https://aur.archlinux.org/spotify.git
+cd spotify
+makepkg -csi 
+cd ..
+rm -R spotify
+
 echo "Cleaning Up..." # Deletes all useless items
 cd /tmp
 rm -R elnathco
