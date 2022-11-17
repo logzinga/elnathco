@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Install Dependencies
       run:  git clone https://gitlab.archlinux.org/archlinux/archiso.git |
-            cd archiso
+            cd archiso |
             make install
     - name: ISO Profile
       run: git clone https://github.com/logzinga/elnathco.git \ cp elnathco/isoprofile ~/iso
