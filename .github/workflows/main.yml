@@ -12,7 +12,7 @@ jobs:
 
       - run: git clone https://github.com/logzinga/elnathco.git 
   
-      - run: cp elnathco/isoprofile ~/iso
+      - run: cp -r elnathco/isoprofile ~/iso
 
       - run: ~/archiso/archiso/mkarchiso -v -w /tmp -o ~/out ~/iso/isoprofile
 
