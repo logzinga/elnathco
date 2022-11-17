@@ -8,17 +8,13 @@ jobs:
     name: BuildISO
     runs-on: ubuntu-18.04
     steps:
-      - run:  git clone https://gitlab.archlinux.org/archlinux/archiso.git 
-
-      - run:  cd archiso 
-      
-      - run:  make install
+      - run:  cd ~ | git clone https://gitlab.archlinux.org/archlinux/archiso.git 
 
       - run: git clone https://github.com/logzinga/elnathco.git 
   
       - run: cp elnathco/isoprofile ~/iso
 
-      - run: mkarchiso -v -w /tmp -o ~/out ~/iso/isoprofile
+      - run: ~/archiso/archiso/mkarchiso -v -w /tmp -o ~/out ~/iso/isoprofile
 
       
     
