@@ -93,6 +93,12 @@ makepkg -csi  # Spotify
 cd ..
 rm -R spotify
 
+git clone https://aur.archlinux.org/timeshift.git
+cd timeshift
+makepkg -csi # timeshift
+cd ..
+rm -R timeshift
+
 echo "Cleaning Up..." # Deletes all useless items
 cd /tmp
 rm -R elnathco
