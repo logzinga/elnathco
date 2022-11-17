@@ -89,7 +89,7 @@ pacman -Syu steam --noconfirm
 cd /tmp
 git clone https://aur.archlinux.org/spotify.git
 cd spotify
-makepkg -csi 
+makepkg -csi  # Spotify 
 cd ..
 rm -R spotify
 
