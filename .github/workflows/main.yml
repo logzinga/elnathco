@@ -11,7 +11,7 @@ jobs:
       - name: archiso gitclone
         run: git clone https://gitlab.archlinux.org/archlinux/archiso.git ~/archiso
       - name: iso profile gitclone
-        run: git clone https://github.com/logzinga/elnathco.git ~/iso
+        run: git clone https://github.com/logzinga/elnathco.git
       - name: copy iso profile
         run: cp -r elnathco/isoprofile ~/iso
       - name: create iso
