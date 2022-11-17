@@ -8,12 +8,16 @@ jobs:
     name: BuildISO
     runs-on: ubuntu-18.04
     steps:
-    - name: Install Dependencies
-      run:  git clone https://gitlab.archlinux.org/archlinux/archiso.git :
-            cd archiso :
-            make install
-    - name: ISO Profile
-      run: git clone https://github.com/logzinga/elnathco.git \ cp elnathco/isoprofile ~/iso
+    - name: Clone ARCHISO
+      run:  git clone https://gitlab.archlinux.org/archlinux/archiso.git 
+    - name: cd ArchISO
+      run:  cd archiso
+    - name: Install ARCHISO
+      run:  make install
+    - name: Clone ISOPROFILE
+      run: git clone https://github.com/logzinga/elnathco.git 
+    - name: Prepare ISO Profile  
+      run: cp elnathco/isoprofile ~/iso
     - name: Build ISO
       run: mkarchiso -v -w /tmp -o ~/out ~/iso/isoprofile
 
