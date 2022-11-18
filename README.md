@@ -3,4 +3,6 @@ Elnathco (el-nar-cho) is a school project of mine to create straight forward arc
 
 This is intended for school use only, not for the general public.
 
+To see how to use elnathco, check the wiki on GitHub.
+
 
